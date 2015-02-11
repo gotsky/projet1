@@ -1,19 +1,19 @@
 
 public class Ville {		
 	//Stocke le nom de notre ville
-	private String nomVille;
+	protected String nomVille;
 	//Stocke le nom du pays de notre ville
-	private String nomPays;
+	protected String nomPays;
 	//Stocke le nombre d'habitants de notre ville
-	private int nbreHabitants;
-	private char categorie;
+	protected int nbreHabitants;
+	protected char categorie;
 	
 	
 	  //Variables publiques qui comptent les instances
 	  public static int nbreInstances = 0;
 
 	  //Variable privée qui comptera aussi les instances
-	  private static int nbreInstancesBis = 0; 
+	  protected static int nbreInstancesBis = 0; 
 	
 	//Constructeur par défaut
 	public Ville(){
@@ -122,5 +122,9 @@ public class Ville {
 	  public static int getNombreInstancesBis()
 	  {
 	    return nbreInstancesBis;
-	  }  
+	  }
+	  
+//	  public String toString(){
+//		  return "\t"+this.nomVille+" est une ville de "+this.nomPays+", elle comporte : "+this.nbreHabitants+" => elle est donc de catégorie : "+this.categorie;
+//	  }
 }
